@@ -21,7 +21,7 @@ class Dog
     dog = DB[:conn].execute("SELECT * FROM dogs WHERE name = ? AND breed = ?", name, breed)
     binding.pry
     if !dog.empty?
-      self.find_by_id(dog[0])
+      self.find_by_id(dog[0][0])
     else
       self.create(name: name, breed: breed)
     end
