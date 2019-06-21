@@ -22,8 +22,7 @@ class Dog
     if !dog.empty?
       dog.save
     else
-      self.create
-
+      self.create(name: name, breed: breed)
     end
   end
 
