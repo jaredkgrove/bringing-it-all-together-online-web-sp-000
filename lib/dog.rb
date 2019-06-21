@@ -23,6 +23,8 @@ class Dog
     if !dog.empty?
       dog.save
     else
+      self.create
+        
     end
   end
 
