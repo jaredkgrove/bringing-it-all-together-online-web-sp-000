@@ -24,7 +24,7 @@ class Dog
       dog.save
     else
       self.create
-        
+
     end
   end
 
