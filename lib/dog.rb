@@ -23,7 +23,7 @@ class Dog
     if !dog.empty?
       dog.save
     else
-    end 
+    end
   end
 
   def self.find_by_id(id)
