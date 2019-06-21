@@ -19,13 +19,13 @@ class Dog
   end
 
   def update
-    sql = <<-SQL 
+    sql = <<-SQL
       UPDATE dogs
       SET name = ?, breed = ?
       WHERE id = ?
-    SQL 
+    SQL
       DB[:conn].execute(sql, self.name, self.breed, self.id
-  end 
+  end
 
   def self.find_by_name(name)
     DB[:conn].execute("SELECT * FROM dogs WHERE name = ?", name).collect{|row| self.new(id: row[0], name: row[1], breed: row[2]) }.first
