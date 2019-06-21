@@ -24,7 +24,7 @@ class Dog
       SET name = ?, breed = ?
       WHERE id = ?
     SQL
-      DB[:conn].execute(sql, self.name, self.breed, self.id)
+    DB[:conn].execute(sql, self.name, self.breed, self.id)
   end
 
   def self.find_by_name(name)
