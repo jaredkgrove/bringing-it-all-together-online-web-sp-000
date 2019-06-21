@@ -24,7 +24,6 @@ class Dog
     else
       self.create(name: name, breed: breed)
     end
-    dog[0][0]
   end
 
   def self.find_by_id(id)
